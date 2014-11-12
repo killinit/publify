@@ -4,6 +4,7 @@ class Feedback < ActiveRecord::Base
 
   belongs_to :text_filter
   belongs_to :article
+  has_many :flags, dependent: :destroy
 
   include PublifyGuid
   include Stateful

@@ -3,6 +3,7 @@ require 'timeout'
 
 class Comment < Feedback
   belongs_to :user
+
   content_fields :body
   validates_presence_of :author, :body
 
