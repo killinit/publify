@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141104093725) do
+ActiveRecord::Schema.define(version: 20141112164515) do
 
   create_table "articles_tags", id: false, force: true do |t|
     t.integer "article_id"
@@ -93,6 +93,15 @@ ActiveRecord::Schema.define(version: 20141104093725) do
 
   add_index "feedback", ["article_id"], name: "index_feedback_on_article_id", using: :btree
   add_index "feedback", ["text_filter_id"], name: "index_feedback_on_text_filter_id", using: :btree
+
+  create_table "flags", force: true do |t|
+    t.integer  "feedback_id"
+    t.string   "explanation", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "flags", ["feedback_id"], name: "index_flags_on_feedback_id", using: :btree
 
   create_table "page_caches", force: true do |t|
     t.string "name"
