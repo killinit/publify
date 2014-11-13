@@ -41,6 +41,10 @@ Rails.application.routes.draw do
     collection do
       match :preview, via: [:get, :post, :put, :delete]
     end
+
+    member do
+      post 'flag', to: 'flags#create'
+    end
   end
 
   resources :trackbacks
