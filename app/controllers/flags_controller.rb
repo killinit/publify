@@ -1,4 +1,11 @@
 class FlagsController < ApplicationController
+  layout 'default.html.erb'
+
+  def new
+    @comment = Comment.where(id: params[:id]).first
+    @flag = @comment.flags.build
+  end
+
   def create
     comment = Comment.where(id: params[:id]).first
 

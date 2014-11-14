@@ -43,7 +43,7 @@ Rails.application.routes.draw do
     end
 
     member do
-      post 'flag', to: 'flags#create'
+      resource 'flag', only: [:new, :create]
     end
   end
 

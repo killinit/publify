@@ -6,6 +6,9 @@
       <%= display_date_and_time comment.created_at %>
     </h4>
     <%= comment.html %>
+
+    <p><%= link_to t(".flag"), new_flag_path(comment) %></p>
+
     <%- unless comment.published %>
       <div class="spamwarning"><%= t(".this_comment_has_been_flagged_for_moderator_approval") %></div>
     <%- end %>

@@ -49,6 +49,11 @@ en:
       said: "said"
       by: "by"
       this_comment_has_been_flagged_for_moderator_approval: "This comment has been flagged for moderator approval.  It won't appear on this blog until the author approves it"
+      flag: "Flag this comment"
+  flags:
+    new:
+      flag: "Flag"
+      explanation: "Reason for flagging"
   tags:
     index:
       there_is_no_tags: "There is no tag"

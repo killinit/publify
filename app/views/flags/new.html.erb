@@ -1,0 +1,9 @@
+<h1><%= t('.flag') %></h1>
+
+<%= @comment.html %>
+
+<%= form_for @flag, url: flag_path(@comment) do |f| %>
+  <%= f.label :explanation, t('.explanation') %>
+  <%= f.text_area :explanation %>
+  <%= f.submit t('.flag') %>
+<% end %>
