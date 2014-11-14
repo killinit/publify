@@ -567,6 +567,7 @@ en:
         spam: "Spam"
         presumed_ham: "Presumed ham"
         presumed_spam: "Presumed spam"
+        flagged: "Flagged"
         search: "Search"
         status: "Status"
         comment_author: "Comment Author"

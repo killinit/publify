@@ -14,6 +14,7 @@
     <%= link_to(t(".ham"), {controller: 'admin/feedback', action: :index, only: 'ham'}, {class: 'label label-success'}) %>
     <%= link_to(t(".presumed_spam"), {controller: 'admin/feedback', action: :index, only: 'presumed_spam'}, {class: 'label label-warning'}) %>
     <%= link_to(t(".spam"), {controller: 'admin/feedback', action: :index, only: 'spam'}, {class: 'label label-danger'}) %>
+    <%= link_to(t(".flagged"), {controller: 'admin/feedback', action: :index, only: 'flagged'}, {class: 'label label-default'}) %>
   </p>
 <% end %>
 
