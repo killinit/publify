@@ -14,7 +14,12 @@
     width: 250px;
     height: 50px;
     margin-top: baseline-unit(2);
-    background: asset-url('logo.svg') 0 0 no-repeat;
+    background-image: asset-url('logo.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    .svg & {
+      background-image: asset-url('logo.svg');
+    }
   }
 }
 
@@ -64,5 +69,13 @@
     margin: 0 auto;
     margin-top: baseline-unit(4);
     margin-bottom: baseline-unit(10);
+  }
+}
+
+.l-header__search {
+  display: none;
+
+  @include respond-to($mq-m) {
+    display: block;
   }
 }
