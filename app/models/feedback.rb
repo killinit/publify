@@ -27,6 +27,7 @@ class Feedback < ActiveRecord::Base
   scope :presumed_ham, -> { where(state: 'presumed_ham') }
   scope :presumed_spam, -> { where(state: 'presumed_spam') }
   scope :unapproved, -> { where(status_confirmed: false) }
+  scope :flagged, lambda { joins(:flags) }
 
   has_state(:state,
             valid_states: [:unclassified, :presumed_spam, :just_marked_as_spam, :spam, :just_presumed_ham, :presumed_ham, :just_marked_as_ham, :ham],
