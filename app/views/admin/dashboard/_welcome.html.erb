@@ -22,6 +22,7 @@
         <p><%= link_to(t('.approved_count', count: @confirmed), controller: 'admin/feedback', "ham" => "f") %></p>
         <p><%= link_to(t('.unconfirmed_count', count: @unconfirmed), controller: 'admin/feedback', "presumed_ham" => "f") %></p>
         <p><%= link_to(t(".spam_count", count: @statspam), controller: 'admin/feedback', "spam" => "f") %></p>
+        <p><%= link_to(t('.flagged_count', count: @flagged), controller: 'admin/feedback', only: 'flagged') %></p>
       <% end %>      
     </div>
   </div>

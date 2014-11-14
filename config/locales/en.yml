@@ -653,6 +653,10 @@ en:
           zero: "no spam"
           one: "1 spam"
           other: "%{count} spam"
+        flagged_count:
+          zero: "no flagged"
+          one: "1 flagged"
+          other: "%{count} flagged"
       overview:
         dashboard_explain: "This place gives you a quick overview of what happens on your Publify blog and what you can do. Maybe will you want to %{available_actions}"
         write_a_post: "write a post"

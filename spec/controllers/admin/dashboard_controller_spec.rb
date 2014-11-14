@@ -52,6 +52,10 @@ describe Admin::DashboardController, type: :controller do
     it 'should have a link to Spam queue' do
       expect(response.body).to have_selector("a[href='/admin/feedback?presumed_ham=f']", text: 'no unconfirmed')
     end
+
+    it 'should have a link to flagged comments' do
+      expect(response.body).to have_selector("a[href='/admin/feedback?only=flagged']", text: I18n.t('admin.dashboard.welcome.flagged_count', count: 0))
+    end
   end
 
   describe 'test publisher profile' do
@@ -98,6 +102,10 @@ describe Admin::DashboardController, type: :controller do
 
     it 'should have a link to Spam queue' do
       expect(response.body).to have_selector("a[href='/admin/feedback?presumed_ham=f']", text: 'no unconfirmed')
+    end
+
+    it 'should have a link to flagged comments' do
+      expect(response.body).to have_selector("a[href='/admin/feedback?only=flagged']", text: I18n.t('admin.dashboard.welcome.flagged_count', count: 0))
     end
   end
 
@@ -149,6 +157,10 @@ describe Admin::DashboardController, type: :controller do
 
     it 'should not have a link to Spam queue' do
       expect(response.body).not_to have_selector("a[href='/admin/feedback?presumed_spam=f']", text: 'In your spam queue:')
+    end
+
+    it 'should not have a link to flagged comments' do
+      expect(response.body).not_to have_selector("a[href='/admin/feedback?only=flagged']", text: I18n.t('admin.dashboard.welcome.flagged_count', count: 0))
     end
   end
 end

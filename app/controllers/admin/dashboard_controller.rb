@@ -22,6 +22,7 @@ class Admin::DashboardController < Admin::BaseController
     @presumedspam = Comment.presumed_spam.where('created_at > ?', today).count
     @confirmed = Comment.ham.where('created_at > ?', today).count
     @unconfirmed = Comment.unconfirmed.where('created_at > ?', today).count
+    @flagged = Comment.flagged.where('feedback.created_at > ?', today).count
 
     @comments = Comment.last_published
     @drafts = Article.drafts.where('user_id = ?', current_user.id).limit(5)
