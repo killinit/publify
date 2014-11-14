@@ -1,0 +1,19 @@
+.search {
+  position: relative;
+}
+
+.search__input {
+  padding-right: $search-input-padding;
+}
+
+.search__input--header {
+  border-radius: baseline-unit(1);
+  background-color: $search-input-bg-color--solid;
+  background-color: $search-input-bg-color--transparent;
+}
+
+.search__button {
+  background: transparent;
+  border: 0;
+  width: $search-input-padding;
+}
