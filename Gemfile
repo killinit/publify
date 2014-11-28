@@ -40,6 +40,9 @@ gem 'rails-observers', '~> 0.1.2'
 gem 'ckeditor', github: 'moneyadviceservice/ckeditor'
 gem 'autoprefixer-rails'
 
+# deployment
+gem 'heroku'
+
 group :assets do
   gem 'autoprefixer-rails'
   gem 'jshint_ruby'
