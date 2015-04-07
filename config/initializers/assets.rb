@@ -48,6 +48,7 @@ Rails.application.configure do
   config.assets.precompile += %w(
     jquery.js
     eventsWithPromises/src/eventsWithPromises.js
+    picturefill/picturefill.js
     requirejs/require.js
     rsvp/rsvp.js
   )

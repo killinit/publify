@@ -15,9 +15,11 @@
   }
 }
 
-.l-banner__image {
-  width: 100%;
-  display: block;
+.l-banner__image-container {
+  img {
+    width: 100%;
+    display: block;
+  }
 
   + .l-constrained {
     padding-top: 0;

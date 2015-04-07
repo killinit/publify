@@ -1,0 +1,10 @@
+<span data-picture<% if defined?(classes) %> class="<%= classes %>"<% end %> data-alt="<%= object.hero_image_alt_text %>">
+  <span data-src="<%= object.hero_image.url(:resized) %>"></span>
+  <span data-src="<%= object.hero_image.url(:resized) %>" data-media="(min-width: 600px)"></span>
+  <!--[if (lt IE 9) & (!IEMobile)]>
+      <span data-src="<%= object.hero_image.url(:resized) %>"></span>
+  <![endif]-->
+  <noscript>
+      <img src="<%= object.hero_image.url(:resized) %>" alt="<%= object.hero_image_alt_text %>">
+  </noscript>
+</span>

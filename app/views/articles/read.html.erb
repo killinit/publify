@@ -1,6 +1,6 @@
 <div class="l-banner">
   <% if @article.hero_image.present? %>
-    <%= image_tag(@article.hero_image.url(:resized), class: 'l-banner__image', alt: @article.hero_image_alt_text) %>
+    <%= render 'shared/responsive_image', { object: @article, classes: 'l-banner__image-container' } %>
   <% end %>
 
   <div class="l-constrained">
