@@ -15,7 +15,7 @@ set -e
 RAILS_ENV=production bundle exec foreman run rake assets:precompile
 
 # Update manifest
-git add public/assets/*.json
+git add public/assets/
 
-git commit -m 'Update assets manifest'
+git commit -m 'Update assets and manifest'
 git push origin master
